@@ -406,6 +406,8 @@ extension Triple {
       return "haiku"
     case .wasi:
       return "wasi"
+    case .uefi:
+      return "uefi"
     case .noneOS:
       return nil
 

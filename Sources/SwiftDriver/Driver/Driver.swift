@@ -3568,6 +3568,8 @@ extension Triple {
       return GenericUnixToolchain.self
     case .wasi:
       return WebAssemblyToolchain.self
+    case .uefi:
+      return UEFIToolchain.self
     case .win32:
       return WindowsToolchain.self
     case .noneOS:

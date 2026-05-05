@@ -96,6 +96,7 @@ add_library(SwiftDriver
   Jobs/Toolchain+LinkerSupport.swift
   Jobs/VerifyDebugInfoJob.swift
   Jobs/VerifyModuleInterfaceJob.swift
+  Jobs/UEFIToolchain+LinkerSupport.swift
   Jobs/WebAssemblyToolchain+LinkerSupport.swift
   Jobs/WindowsToolchain+LinkerSupport.swift
   Jobs/PrebuiltModulesJob.swift
@@ -103,6 +104,7 @@ add_library(SwiftDriver
   Toolchains/DarwinToolchain.swift
   Toolchains/GenericUnixToolchain.swift
   Toolchains/Toolchain.swift
+  Toolchains/UEFIToolchain.swift
   Toolchains/WebAssemblyToolchain.swift
   Toolchains/WindowsToolchain.swift
 

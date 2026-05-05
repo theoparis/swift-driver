@@ -1126,6 +1126,7 @@ extension Triple {
     case emscripten
     case visionos = "xros"
     case firmware
+    case uefi
     case noneOS // 'OS' suffix purely to avoid name clash with Optional.none
 
     var name: String {
@@ -1212,6 +1213,8 @@ extension Triple {
         return .visionos
       case _ where os.hasPrefix("firmware"):
         return .firmware
+      case _ where os.hasPrefix("uefi"):
+        return .uefi
       default:
         return nil
       }
@@ -1394,7 +1397,7 @@ extension Triple {
         case nil, .aarch64, .aarch64e, .aarch64_32, .arm, .thumb, .x86, .x86_64:
         if Triple.isDarwin(vendor: vendor, os: os) {
             return .macho
-          } else if os?.isWindows ?? false {
+          } else if os?.isWindows ?? false || os == .uefi {
             return .coff
           }
           return .elf
